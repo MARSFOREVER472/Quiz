@@ -43,7 +43,21 @@ namespace Math_Quiz_01_MOO_ICT
         // Al clickear el botón de chequear respuesta, se muestran las acciones mediante un método para posteriores revisiones de ejecución.
         private void EventoCliquearBotonChequeo(object sender, EventArgs e)
         {
-            SetUpGame(); // Llamado del método anterior.
+            int userEntered = Convert.ToInt32(txtAnswer.Text); // Deberá ser verificada con una respuesta en 32 bits de carácteres máximos.
+
+            if (userEntered == total) // Si la respuesta entregada es igual al total de la operación.
+            {
+                lblAnswer.Text = "Correcto"; // La respuesta es correcta.
+                lblAnswer.ForeColor = Color.Green; // El color de este texto mismo es verde.
+                score += 1; // Suma 1 punto por cada respuesta correcta.
+                lblScore.Text = "Puntuación: " + score; // Puntuación: 0 + 1 + 1 + ...
+                SetUpGame(); // Llamado del método anterior.
+            }
+            else // En caso contrario...
+            {
+                lblAnswer.Text = "Incorrecto"; // La respuesta es incorrecta.
+                lblAnswer.ForeColor = Color.Red; // El color de este texto mismo es rojo.
+            }
         }
 
         // Método para arreglar la interfaz del juego.
@@ -63,7 +77,6 @@ namespace Math_Quiz_01_MOO_ICT
                     total = numA + numB; // Ej: 14 + 2 = 16
                     lblSymbol.Text = "+"; // Símbolo para sumar 2 valores.
                     lblSymbol.ForeColor = Color.Red;  // Rojo para la suma.
-
                     break;
 
                  case "Sustracción": // Resta.
@@ -71,7 +84,6 @@ namespace Math_Quiz_01_MOO_ICT
                     total = numA - numB; // Ej: 14 - 2 = 12
                     lblSymbol.Text = "-"; // Símbolo para restar 2 valores.
                     lblSymbol.ForeColor = Color.Blue; // Azul para la resta.
-
                     break;
 
                  case "Multiplicación": // Multiplicación.
@@ -79,7 +91,6 @@ namespace Math_Quiz_01_MOO_ICT
                     total = numA * numB; // Ej: 8 * 2 = 16
                     lblSymbol.Text = "x"; // Símbolo para multiplicar 2 valores.
                     lblSymbol.ForeColor = Color.Yellow; // Amarillo para la multiplicación.
-
                     break;
             }
 

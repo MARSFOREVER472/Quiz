@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.lblNumA = new System.Windows.Forms.Label();
             this.lblSymbol = new System.Windows.Forms.Label();
             this.lblNumB = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAnswer = new System.Windows.Forms.Label();
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(1, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Puntuación: 0";
+            this.lblScore.AutoSize = true;
+            this.lblScore.ForeColor = System.Drawing.Color.Red;
+            this.lblScore.Location = new System.Drawing.Point(1, 9);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(106, 20);
+            this.lblScore.TabIndex = 0;
+            this.lblScore.Text = "Puntuación: 0";
             // 
             // lblNumA
             // 
@@ -89,16 +89,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "=";
             // 
-            // label2
+            // lblAnswer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(5, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Correcto";
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblAnswer.Location = new System.Drawing.Point(5, 95);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new System.Drawing.Size(106, 29);
+            this.lblAnswer.TabIndex = 5;
+            this.lblAnswer.Text = "Correcto";
             // 
             // txtAnswer
             // 
@@ -127,12 +127,12 @@
             this.ClientSize = new System.Drawing.Size(627, 128);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAnswer);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblNumB);
             this.Controls.Add(this.lblSymbol);
             this.Controls.Add(this.lblNumA);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblScore);
             this.Name = "Form1";
             this.Text = "Maths Quiz Game";
             this.ResumeLayout(false);
@@ -142,12 +142,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblNumA;
         private System.Windows.Forms.Label lblSymbol;
         private System.Windows.Forms.Label lblNumB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Button button1;
     }
